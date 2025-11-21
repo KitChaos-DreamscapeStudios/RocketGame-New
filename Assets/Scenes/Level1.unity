@@ -1046,7 +1046,7 @@ GameObject:
   - component: {fileID: 804581767}
   m_Layer: 3
   m_Name: Square (12)
-  m_TagString: Untagged
+  m_TagString: Kill
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2388,7 +2388,7 @@ GameObject:
   - component: {fileID: 1570937963}
   m_Layer: 3
   m_Name: Square (18)
-  m_TagString: Untagged
+  m_TagString: Kill
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
