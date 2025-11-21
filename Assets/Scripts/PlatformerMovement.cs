@@ -149,6 +149,9 @@ public class PlatformerMovement: MonoBehaviour
                 hitBigRocket = false;
             }
             ImpactTime = 0.4f;
+            if(isOnGround && RocketsLeft ==3){
+                RocketsLeft = 2;
+            }
                 if(hitBigRocket){
                     foreach(SpriteRenderer s in FindObjectsByType<SpriteRenderer>(FindObjectsSortMode.None)){
                     Camera.main.backgroundColor = new Color(1, 1, 1);
