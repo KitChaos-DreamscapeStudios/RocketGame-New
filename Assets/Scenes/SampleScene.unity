@@ -1321,7 +1321,7 @@ MonoBehaviour:
   isOnGround: 0
   ground:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 8
   moveSpeed: 9
   Rocket: {fileID: 7346385501856191215, guid: 418268494cbea2ef38eb0bc88712889b, type: 3}
   Orient: {fileID: 1588373623}

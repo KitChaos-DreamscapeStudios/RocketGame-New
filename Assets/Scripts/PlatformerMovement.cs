@@ -106,7 +106,7 @@ public class PlatformerMovement: MonoBehaviour
             }
             Rk.transform.position = (Vector2)transform.position + direction *1.1f;
             Rk.transform.right = direction;
-            Rk.GetComponent<Rigidbody2D>().linearVelocity = Rk.transform.right.normalized * 10;
+            Rk.GetComponent<Rigidbody2D>().linearVelocity = Rk.transform.right.normalized * 20;
         }
         RocketCool -= Time.deltaTime;
         AmmoCounter.text = RocketsLeft.ToString();

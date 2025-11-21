@@ -10,7 +10,7 @@ public class Explosion : MonoBehaviour
         Destroy(gameObject, 1);
         if(isThirdRocket){
             transform.localScale *= 2;
-            force *= 2.5f;
+            force *= 1.5f;
         }
     }
 
