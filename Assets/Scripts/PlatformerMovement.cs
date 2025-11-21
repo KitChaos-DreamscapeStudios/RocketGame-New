@@ -115,7 +115,7 @@ public class PlatformerMovement: MonoBehaviour
     private void FixedUpdate()
     {
        
-        if(ImpactTime<=-0.5f){
+        if(ImpactTime<=-0.25f){
             if(!isOnGround){
                 if(horizontal!=0){
                      body.linearVelocity = new Vector2(horizontal * moveSpeed, body.linearVelocity.y);

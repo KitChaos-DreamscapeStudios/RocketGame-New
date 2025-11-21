@@ -11,7 +11,7 @@ public abstract class Button : MonoBehaviour
     public ButtonType buttonType;
     public abstract void OnHit();
     public void OnCollisionEnter2D(Collision2D col){
-        if((buttonType == ButtonType.Shoot || buttonType == ButtonType.ShootNWalk)&&col.collider.gameObject.GetComponent<Explosion>()){
+        if((buttonType == ButtonType.Shoot || buttonType == ButtonType.ShootNWalk)&&col.collider.gameObject.GetComponent<Rocket>()){
             OnHit();
         }
         if((buttonType==ButtonType.Walk||buttonType==ButtonType.ShootNWalk)&&col.collider.gameObject.GetComponent<PlatformerMovement>()){

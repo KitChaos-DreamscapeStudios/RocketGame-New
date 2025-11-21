@@ -6,8 +6,7 @@ public class Rocket : MonoBehaviour
     public GameObject Explosion;
     public LayerMask Ground;
     public bool IsThirdRocket;
-    public LayerMask RocketBounce;
-    public LayerMask RocketAbsorb;
+    
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -24,7 +23,10 @@ public class Rocket : MonoBehaviour
         if(col.collider.gameObject.layer == 7){
             Destroy(gameObject);
         }
-        if(col.collider.gameObject.layer != 7){
+        if(col.collider.gameObject.layer == 8){
+            GetComponent<Rigidbody2D>().linearVelocity = Vector3.Reflect(GetComponent<Rigidbody2D>().linearVelocity, col.contacts[0].normal);
+        }
+        if(col.collider.gameObject.layer != 7 && col.collider.gameObject.layer != 8){
             var expl = Instantiate(Explosion, transform.position, Quaternion.identity);
             expl.GetComponent<Explosion>().isThirdRocket = IsThirdRocket;
             Destroy(gameObject);
