@@ -381,8 +381,8 @@ Transform:
   m_GameObject: {fileID: 412943580}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -14.7, y: 177.4, z: 0}
-  m_LocalScale: {x: 45.705444, y: 6.845115, z: 1}
+  m_LocalPosition: {x: 24, y: 170.5, z: 0}
+  m_LocalScale: {x: 5.315543, y: 17.520073, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -607,8 +607,8 @@ Transform:
   m_GameObject: {fileID: 511350026}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -14.7, y: 199.6, z: 0}
-  m_LocalScale: {x: 45.705444, y: 6.845115, z: 1}
+  m_LocalPosition: {x: -10, y: 189.7, z: 0}
+  m_LocalScale: {x: 45.705444, y: 4.14814, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -1321,7 +1321,7 @@ MonoBehaviour:
   isOnGround: 0
   ground:
     serializedVersion: 2
-    m_Bits: 8
+    m_Bits: 0
   moveSpeed: 9
   Rocket: {fileID: 7346385501856191215, guid: 418268494cbea2ef38eb0bc88712889b, type: 3}
   Orient: {fileID: 1588373623}

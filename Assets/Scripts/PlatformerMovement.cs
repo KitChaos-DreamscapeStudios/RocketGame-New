@@ -24,6 +24,7 @@ public class PlatformerMovement: MonoBehaviour
     public int RocketsLeft;
     public TMPro.TextMeshProUGUI AmmoCounter;
     float RocketCool;
+    bool hitBigRocket;
     // Start is called before the first frame update
     //Additional Instructions
     //Make sure the object you attatch this to has a Rigidbody2D component attatched to it, and there is a square below it with the Layer "Ground"
@@ -43,7 +44,7 @@ public class PlatformerMovement: MonoBehaviour
     {
         Physics2D.IgnoreLayerCollision(gameObject.layer, gameObject.layer);
         ImpactTime -= Time.unscaledDeltaTime;
-        if(ImpactTime >0){
+        if(ImpactTime >0 && hitBigRocket){
             Time.timeScale = 0;
         }
         else{
@@ -76,13 +77,7 @@ public class PlatformerMovement: MonoBehaviour
 
         }
         
-        
-        if((Mathf.Abs(body.linearVelocityX)> THRESHOLDVELOC||Mathf.Abs(body.linearVelocityY) >THRESHOLDVELOC)&&Time.timeScale>0){
-            Camera.main.orthographicSize = Mathf.Lerp(Camera.main.orthographicSize, BaseSize + ((Mathf.Abs(body.linearVelocityX) + Mathf.Abs(body.linearVelocityY)) - THRESHOLDVELOC), 0.16f);
-        }
-        else{
-            Camera.main.orthographicSize = Mathf.Lerp(Camera.main.orthographicSize,BaseSize,0.2f);
-        }
+       
         Vector2 mouseScreenPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         
         var pos1 = transform.position;
@@ -101,7 +96,14 @@ public class PlatformerMovement: MonoBehaviour
         if(Input.GetMouseButtonDown(0)&&RocketCool <=0&&RocketsLeft>0){
             RocketsLeft -= 1;
             RocketCool = 0.5f;
+            
             var Rk = Instantiate(Rocket, transform.position + Orient.transform.forward.normalized * 1, Quaternion.identity);
+            if(RocketsLeft <=0){
+                Rk.GetComponent<Rocket>().IsThirdRocket = true;
+            }
+            else{
+                Rk.GetComponent<Rocket>().IsThirdRocket = false;
+            }
             Rk.transform.position = (Vector2)transform.position + direction *1.1f;
             Rk.transform.right = direction;
             Rk.GetComponent<Rigidbody2D>().linearVelocity = Rk.transform.right.normalized * 10;
@@ -140,11 +142,20 @@ public class PlatformerMovement: MonoBehaviour
     public void OnTriggerEnter2D(Collider2D other){
         if(other.gameObject.TryGetComponent(out Explosion e)){
             body.linearVelocity = ((transform.position - other.gameObject.transform.position).normalized)*e.force;
-            ImpactTime = 0.4f;
-            foreach(SpriteRenderer s in FindObjectsByType<SpriteRenderer>(FindObjectsSortMode.None)){
-                Camera.main.backgroundColor = new Color(1, 1, 1);
-                s.color = new Color(0.01f, 0.01f, 0.01f, 1);
+            if(e.isThirdRocket){
+                hitBigRocket = true;
             }
+            else{
+                hitBigRocket = false;
+            }
+            ImpactTime = 0.4f;
+                if(hitBigRocket){
+                    foreach(SpriteRenderer s in FindObjectsByType<SpriteRenderer>(FindObjectsSortMode.None)){
+                    Camera.main.backgroundColor = new Color(1, 1, 1);
+                    s.color = new Color(0.01f, 0.01f, 0.01f, 1);
+                }
+            }
+           
 
         }
        if(other.gameObject.TryGetComponent(out RespawnBox r)){
