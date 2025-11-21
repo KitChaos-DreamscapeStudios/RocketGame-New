@@ -179,3 +179,10 @@ MonoBehaviour:
   Ground:
     serializedVersion: 2
     m_Bits: 8
+  IsThirdRocket: 0
+  RocketBounce:
+    serializedVersion: 2
+    m_Bits: 0
+  RocketAbsorb:
+    serializedVersion: 2
+    m_Bits: 128
