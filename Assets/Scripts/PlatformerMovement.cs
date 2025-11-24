@@ -25,6 +25,11 @@ public class PlatformerMovement: MonoBehaviour
     public TMPro.TextMeshProUGUI AmmoCounter;
     float RocketCool;
     bool hitBigRocket;
+    public List<AudioSource> Sounds;
+    public const int RocketShoot=0;
+    public const int JumpSFX = 1;
+    public const int HitStunSFX = 2;
+    public const int ReloadSFX = 3;
     // Start is called before the first frame update
     //Additional Instructions
     //Make sure the object you attatch this to has a Rigidbody2D component attatched to it, and there is a square below it with the Layer "Ground"
@@ -57,7 +62,12 @@ public class PlatformerMovement: MonoBehaviour
             Camera.main.backgroundColor = new Color(0.2f, 0.3f, 0.7f);
         }
         if(isOnGround&&ImpactTime<=-0.5f){
+            if(RocketsLeft <3){
+                 Sounds[ReloadSFX].Play();
+            }
             RocketsLeft = 3;
+
+           
         }
         //Camera.main.transform.position = Vector3.MoveTowards(Camera.main.transform.position, new Vector3(transform.position.x, transform.position.y, -10), 0.1f);
         horizontal = Input.GetAxisRaw("Horizontal");
@@ -71,8 +81,8 @@ public class PlatformerMovement: MonoBehaviour
             if(ImpactTime <=-0.25f){
                  body.linearVelocity = new Vector2(body.linearVelocity.x, 1 * jumpPower);
             }
-           
-        }
+                Sounds[JumpSFX].Play();
+            }
             
 
         }
@@ -94,6 +104,7 @@ public class PlatformerMovement: MonoBehaviour
         }
         Orient.transform.eulerAngles = -(Orient.transform.position - Camera.main.ScreenToWorldPoint(Input.mousePosition));
         if(Input.GetMouseButtonDown(0)&&RocketCool <=0&&RocketsLeft>0){
+            Sounds[RocketShoot].Play();
             RocketsLeft -= 1;
             RocketCool = 0.5f;
             
@@ -153,10 +164,11 @@ public class PlatformerMovement: MonoBehaviour
                 RocketsLeft = 2;
             }
                 if(hitBigRocket){
-                    foreach(SpriteRenderer s in FindObjectsByType<SpriteRenderer>(FindObjectsSortMode.None)){
-                    Camera.main.backgroundColor = new Color(1, 1, 1);
-                    s.color = new Color(0.01f, 0.01f, 0.01f, 1);
-                }
+                Sounds[HitStunSFX].Play();
+                foreach(SpriteRenderer s in FindObjectsByType<SpriteRenderer>(FindObjectsSortMode.None)){
+                        Camera.main.backgroundColor = new Color(1, 1, 1);
+                        s.color = new Color(0.01f, 0.01f, 0.01f, 1);
+                    }
             }
            
 
@@ -170,6 +182,7 @@ public class PlatformerMovement: MonoBehaviour
                 RocketsLeft = 3;
             }
             A.RespawnTime = 5;
+            Sounds[ReloadSFX].Play();
         }
     }
     public void OnCollisionEnter2D(Collision2D col){
