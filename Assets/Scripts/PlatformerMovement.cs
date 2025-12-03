@@ -30,6 +30,7 @@ public class PlatformerMovement: MonoBehaviour
     public const int JumpSFX = 1;
     public const int HitStunSFX = 2;
     public const int ReloadSFX = 3;
+    public GameObject BG;
     // Start is called before the first frame update
     //Additional Instructions
     //Make sure the object you attatch this to has a Rigidbody2D component attatched to it, and there is a square below it with the Layer "Ground"
@@ -57,9 +58,14 @@ public class PlatformerMovement: MonoBehaviour
         }
         if(ImpactTime <=0 && GetComponent<SpriteRenderer>().color.r < 0.5f){
             foreach(SpriteRenderer s in FindObjectsByType<SpriteRenderer>(FindObjectsSortMode.None)){
-                s.color = new Color(1, 1, 1, 1);
+               
+                 if(s.gameObject != BG){
+                             s.color = new Color(1, 1, 1, 1);
+                        }
+
             }
             Camera.main.backgroundColor = new Color(0.2f, 0.3f, 0.7f);
+            BG.SetActive(true);
         }
         if(isOnGround&&ImpactTime<=-0.5f){
             if(RocketsLeft <3){
@@ -116,8 +122,8 @@ public class PlatformerMovement: MonoBehaviour
                 Rk.GetComponent<Rocket>().IsThirdRocket = false;
             }
             Rk.transform.position = (Vector2)transform.position + direction *1.1f;
-            Rk.transform.right = direction;
-            Rk.GetComponent<Rigidbody2D>().linearVelocity = Rk.transform.right.normalized * 20;
+            Rk.transform.up = direction;
+            Rk.GetComponent<Rigidbody2D>().linearVelocity = Rk.transform.up.normalized * 20;
         }
         RocketCool -= Time.deltaTime;
         AmmoCounter.text = RocketsLeft.ToString();
@@ -167,8 +173,13 @@ public class PlatformerMovement: MonoBehaviour
                 Sounds[HitStunSFX].Play();
                 foreach(SpriteRenderer s in FindObjectsByType<SpriteRenderer>(FindObjectsSortMode.None)){
                         Camera.main.backgroundColor = new Color(1, 1, 1);
-                        s.color = new Color(0.01f, 0.01f, 0.01f, 1);
+                      
+                        if(s.gameObject != BG){
+                              s.color = new Color(0.01f, 0.01f, 0.01f, 1);
+                        }
+
                     }
+                BG.SetActive(false);
             }
            
 

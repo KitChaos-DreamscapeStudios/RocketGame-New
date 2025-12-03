@@ -1,0 +1,754 @@
+fileFormatVersion: 2
+guid: ec25f33422455e14c8d017230185a169
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4218472218234739999
+    second: Barrel_Anim_0
+  - first:
+      213: -2605970230532673833
+    second: Barrel_Anim_1
+  - first:
+      213: 8728068222071175059
+    second: Barrel_Anim_2
+  - first:
+      213: -6273958747795563198
+    second: Barrel_Anim_3
+  - first:
+      213: 9093214490835188899
+    second: Barrel_Anim_4
+  - first:
+      213: -1057985320580921545
+    second: Barrel_Anim_5
+  - first:
+      213: -6431451073477882634
+    second: Barrel_Anim_6
+  - first:
+      213: -6795109062578400172
+    second: Barrel_Anim_7
+  - first:
+      213: -273674451456488226
+    second: Barrel_Anim_8
+  - first:
+      213: 1956328358564312762
+    second: Barrel_Anim_9
+  - first:
+      213: 5859139306898279613
+    second: Barrel_Anim_10
+  - first:
+      213: -2265124802761780971
+    second: Barrel_Anim_11
+  - first:
+      213: 5356569198959333857
+    second: Barrel_Anim_12
+  - first:
+      213: 3043855824165414848
+    second: Barrel_Anim_13
+  - first:
+      213: -758029645297037950
+    second: Barrel_Anim_14
+  - first:
+      213: 6975572653730822282
+    second: Barrel_Anim_15
+  - first:
+      213: 2622801794069108326
+    second: Barrel_Anim_16
+  - first:
+      213: -8713818474656313308
+    second: Barrel_Anim_17
+  - first:
+      213: -4200213593318209742
+    second: Barrel_Anim_18
+  - first:
+      213: -7578760352130629810
+    second: Barrel_Anim_19
+  - first:
+      213: 2237010622875568017
+    second: Barrel_Anim_20
+  - first:
+      213: 5141378217318164606
+    second: Barrel_Anim_21
+  - first:
+      213: -4434131852525343601
+    second: Barrel_Anim_22
+  - first:
+      213: -8029694161489670397
+    second: Barrel_Anim_23
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Barrel_Anim_0
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 718
+        width: 89
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f1d5cbec1260b8a30800000000000000
+      internalID: 4218472218234739999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Barrel_Anim_1
+      rect:
+        serializedVersion: 2
+        x: 534
+        y: 819
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7de6bd1e1ebb5dbd0800000000000000
+      internalID: -2605970230532673833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Barrel_Anim_2
+      rect:
+        serializedVersion: 2
+        x: 756
+        y: 824
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3977deffdc3502970800000000000000
+      internalID: 8728068222071175059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Barrel_Anim_3
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 718
+        width: 89
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 24dd03e72cb6ee8a0800000000000000
+      internalID: -6273958747795563198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Barrel_Anim_4
+      rect:
+        serializedVersion: 2
+        x: 517
+        y: 718
+        width: 89
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ac7aa8c666913e70800000000000000
+      internalID: 9093214490835188899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Barrel_Anim_5
+      rect:
+        serializedVersion: 2
+        x: 740
+        y: 718
+        width: 89
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7374235d4f74151f0800000000000000
+      internalID: -1057985320580921545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Barrel_Anim_6
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 607
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6fccb0fe255eeb6a0800000000000000
+      internalID: -6431451073477882634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Barrel_Anim_7
+      rect:
+        serializedVersion: 2
+        x: 311
+        y: 607
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4541af24f4ce2b1a0800000000000000
+      internalID: -6795109062578400172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Barrel_Anim_8
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 495
+        width: 89
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: edc06d05986b33cf0800000000000000
+      internalID: -273674451456488226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Barrel_Anim_9
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 495
+        width: 89
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab6bf3ce646462b10800000000000000
+      internalID: 1956328358564312762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Barrel_Anim_10
+      rect:
+        serializedVersion: 2
+        x: 517
+        y: 495
+        width: 89
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dbc43351828df4150800000000000000
+      internalID: 5859139306898279613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Barrel_Anim_11
+      rect:
+        serializedVersion: 2
+        x: 740
+        y: 495
+        width: 89
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 51115773ef8a090e0800000000000000
+      internalID: -2265124802761780971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Barrel_Anim_12
+      rect:
+        serializedVersion: 2
+        x: 580
+        y: 388
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e115ce5e4b565a40800000000000000
+      internalID: 5356569198959333857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Barrel_Anim_13
+      rect:
+        serializedVersion: 2
+        x: 803
+        y: 399
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c722eabeb2fd3a20800000000000000
+      internalID: 3043855824165414848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Barrel_Anim_14
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 374
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28dcad6cd00fa75f0800000000000000
+      internalID: -758029645297037950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Barrel_Anim_15
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 380
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a88fd82de563ec060800000000000000
+      internalID: 6975572653730822282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Barrel_Anim_16
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 273
+        width: 89
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6661fb3e550166420800000000000000
+      internalID: 2622801794069108326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Barrel_Anim_17
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 273
+        width: 89
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 420dfdcd34c421780800000000000000
+      internalID: -8713818474656313308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Barrel_Anim_18
+      rect:
+        serializedVersion: 2
+        x: 517
+        y: 273
+        width: 89
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23740859df7d5b5c0800000000000000
+      internalID: -4200213593318209742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Barrel_Anim_19
+      rect:
+        serializedVersion: 2
+        x: 740
+        y: 273
+        width: 89
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e4f707d1d95d2d690800000000000000
+      internalID: -7578760352130629810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Barrel_Anim_20
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 181
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 197064f2f457b0f10800000000000000
+      internalID: 2237010622875568017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Barrel_Anim_21
+      rect:
+        serializedVersion: 2
+        x: 358
+        y: 182
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e782e2b9f38d95740800000000000000
+      internalID: 5141378217318164606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Barrel_Anim_22
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 50
+        width: 89
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f8c6bfab29cc672c0800000000000000
+      internalID: -4434131852525343601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Barrel_Anim_23
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 50
+        width: 89
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 30f416904bbc09090800000000000000
+      internalID: -8029694161489670397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Barrel_Anim_0: 4218472218234739999
+      Barrel_Anim_1: -2605970230532673833
+      Barrel_Anim_10: 5859139306898279613
+      Barrel_Anim_11: -2265124802761780971
+      Barrel_Anim_12: 5356569198959333857
+      Barrel_Anim_13: 3043855824165414848
+      Barrel_Anim_14: -758029645297037950
+      Barrel_Anim_15: 6975572653730822282
+      Barrel_Anim_16: 2622801794069108326
+      Barrel_Anim_17: -8713818474656313308
+      Barrel_Anim_18: -4200213593318209742
+      Barrel_Anim_19: -7578760352130629810
+      Barrel_Anim_2: 8728068222071175059
+      Barrel_Anim_20: 2237010622875568017
+      Barrel_Anim_21: 5141378217318164606
+      Barrel_Anim_22: -4434131852525343601
+      Barrel_Anim_23: -8029694161489670397
+      Barrel_Anim_3: -6273958747795563198
+      Barrel_Anim_4: 9093214490835188899
+      Barrel_Anim_5: -1057985320580921545
+      Barrel_Anim_6: -6431451073477882634
+      Barrel_Anim_7: -6795109062578400172
+      Barrel_Anim_8: -273674451456488226
+      Barrel_Anim_9: 1956328358564312762
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
