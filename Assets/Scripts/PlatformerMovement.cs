@@ -31,6 +31,8 @@ public class PlatformerMovement: MonoBehaviour
     public const int HitStunSFX = 2;
     public const int ReloadSFX = 3;
     public GameObject BG;
+    public GameObject Head;
+    public Animator Anim;
     // Start is called before the first frame update
     //Additional Instructions
     //Make sure the object you attatch this to has a Rigidbody2D component attatched to it, and there is a square below it with the Layer "Ground"
@@ -43,11 +45,13 @@ public class PlatformerMovement: MonoBehaviour
         
         BaseSize = Camera.main.orthographicSize;
         body = gameObject.GetComponent<Rigidbody2D>();
+        Anim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
     void Update()
     {
+
         Physics2D.IgnoreLayerCollision(gameObject.layer, gameObject.layer);
         ImpactTime -= Time.unscaledDeltaTime;
         if(ImpactTime >0 && hitBigRocket){
@@ -77,7 +81,7 @@ public class PlatformerMovement: MonoBehaviour
         }
         //Camera.main.transform.position = Vector3.MoveTowards(Camera.main.transform.position, new Vector3(transform.position.x, transform.position.y, -10), 0.1f);
         horizontal = Input.GetAxisRaw("Horizontal");
-        isOnGround = Physics2D.OverlapBox(transform.position-new Vector3(0,1f), new Vector2(0.95f, 0.2f), 0, ground);
+        isOnGround = Physics2D.OverlapBox(transform.position-new Vector3(0,1f), new Vector2(0.95f, 0.3f), 0, ground);
         if (Input.GetKeyDown(KeyCode.Space) && isOnGround == true)
         {
              if(body.linearVelocityX >= THRESHOLDVELOC){
@@ -92,8 +96,18 @@ public class PlatformerMovement: MonoBehaviour
             
 
         }
-        
-       
+        if(horizontal != 0){
+            Anim.Play("Walk");
+        }
+        else{
+            Anim.Play("Idle");
+        }
+        if(horizontal == -1){
+            GetComponent<SpriteRenderer>().flipX = true;
+        }
+        else{
+            GetComponent<SpriteRenderer>().flipX = false;
+        }
         Vector2 mouseScreenPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         
         var pos1 = transform.position;
@@ -109,6 +123,7 @@ public class PlatformerMovement: MonoBehaviour
             Camera.main.transform.position = Vector3.Lerp(Camera.main.transform.position, pos, 0.1f);
         }
         Orient.transform.eulerAngles = -(Orient.transform.position - Camera.main.ScreenToWorldPoint(Input.mousePosition));
+        Head.transform.up = direction;
         if(Input.GetMouseButtonDown(0)&&RocketCool <=0&&RocketsLeft>0){
             Sounds[RocketShoot].Play();
             RocketsLeft -= 1;
@@ -121,7 +136,7 @@ public class PlatformerMovement: MonoBehaviour
             else{
                 Rk.GetComponent<Rocket>().IsThirdRocket = false;
             }
-            Rk.transform.position = (Vector2)transform.position + direction *1.1f;
+            Rk.transform.position = ((Vector2)transform.position+new Vector2(0,1f)) + (direction *1.1f);
             Rk.transform.up = direction;
             Rk.GetComponent<Rigidbody2D>().linearVelocity = Rk.transform.up.normalized * 20;
         }
@@ -201,6 +216,7 @@ public class PlatformerMovement: MonoBehaviour
         if(col.collider.gameObject.CompareTag("Kill")){
             Debug.Log("HitKillbox");
             transform.position = RespawnPosition;
+            body.linearVelocity = new Vector2(0, 0);
         }
     }
 }
