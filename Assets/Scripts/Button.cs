@@ -2,7 +2,8 @@ using UnityEngine;
 
 public abstract class Button : MonoBehaviour
 {
-   
+    public Sprite Pressed;
+    protected Sprite BaseSprite;
     public enum ButtonType{
         Shoot,
         Walk,
@@ -10,6 +11,9 @@ public abstract class Button : MonoBehaviour
     }
     public ButtonType buttonType;
     public abstract void OnHit();
+    public void Start(){
+        BaseSprite = GetComponent<SpriteRenderer>().sprite;
+    }
     public void OnCollisionEnter2D(Collision2D col){
         if((buttonType == ButtonType.Shoot || buttonType == ButtonType.ShootNWalk)&&col.collider.gameObject.GetComponent<Rocket>()){
             OnHit();

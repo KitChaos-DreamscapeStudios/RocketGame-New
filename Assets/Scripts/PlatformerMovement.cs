@@ -33,6 +33,7 @@ public class PlatformerMovement: MonoBehaviour
     public GameObject BG;
     public GameObject Head;
     public Animator Anim;
+    public Sprite Bal;
     // Start is called before the first frame update
     //Additional Instructions
     //Make sure the object you attatch this to has a Rigidbody2D component attatched to it, and there is a square below it with the Layer "Ground"
@@ -96,7 +97,7 @@ public class PlatformerMovement: MonoBehaviour
             
 
         }
-        if(horizontal != 0){
+        if(horizontal != 0 && isOnGround){
             Anim.Play("Walk");
         }
         else{
@@ -122,8 +123,18 @@ public class PlatformerMovement: MonoBehaviour
             pos.z = -10;
             Camera.main.transform.position = Vector3.Lerp(Camera.main.transform.position, pos, 0.1f);
         }
+        Camera.main.transform.eulerAngles = new Vector3(0, 0, 0);
         Orient.transform.eulerAngles = -(Orient.transform.position - Camera.main.ScreenToWorldPoint(Input.mousePosition));
         Head.transform.up = direction;
+        Head.transform.position = transform.position + transform.up.normalized;
+        if(!isOnGround){
+            transform.eulerAngles += new Vector3(0, 0, 650 * Time.deltaTime);
+            GetComponent<SpriteRenderer>().sprite = Bal;
+        }
+        else{
+            transform.eulerAngles = new Vector3(0, 0, 0);
+        }
+       
         if(Input.GetMouseButtonDown(0)&&RocketCool <=0&&RocketsLeft>0){
             Sounds[RocketShoot].Play();
             RocketsLeft -= 1;
@@ -138,7 +149,7 @@ public class PlatformerMovement: MonoBehaviour
             }
             Rk.transform.position = ((Vector2)transform.position+new Vector2(0,1f)) + (direction *1.1f);
             Rk.transform.up = direction;
-            Rk.GetComponent<Rigidbody2D>().linearVelocity = Rk.transform.up.normalized * 20;
+            Rk.GetComponent<Rigidbody2D>().linearVelocity = Rk.transform.up.normalized * 40;
         }
         RocketCool -= Time.deltaTime;
         AmmoCounter.text = RocketsLeft.ToString();

@@ -774,6 +774,8 @@ MonoBehaviour:
   - {fileID: 250255338834447505}
   BG: {fileID: 0}
   Head: {fileID: 170584989392505809}
+  Anim: {fileID: 0}
+  Bal: {fileID: -7327281829079502070, guid: 1d907b0634759d5e1ae9376921c1da9b, type: 3}
 --- !u!95 &5108718917659226915
 Animator:
   serializedVersion: 7

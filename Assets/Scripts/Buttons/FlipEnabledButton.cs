@@ -6,4 +6,12 @@ public class FlipEnabledButton : Button{
     {
         TargObject.SetActive(!TargObject.activeSelf);
     }
+    public void Update(){
+        if(!TargObject.activeSelf){
+            GetComponent<SpriteRenderer>().sprite = Pressed;
+        }
+        else{
+            GetComponent<SpriteRenderer>().sprite = BaseSprite;
+        }
+    }
 }
