@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using NUnit.Framework.Constraints;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 //To Add this script, create a C# file, and name it PlatformerMovement(Exaclty that) and then paste this entire script in, from start to end.
 //Alternatively, if you wish to name your file something else, only paste in the content below line 7, and remove the last curlybrace.
 
@@ -34,6 +35,7 @@ public class PlatformerMovement: MonoBehaviour
     public GameObject Head;
     public Animator Anim;
     public Sprite Bal;
+    public GameObject WinScreen;
     // Start is called before the first frame update
     //Additional Instructions
     //Make sure the object you attatch this to has a Rigidbody2D component attatched to it, and there is a square below it with the Layer "Ground"
@@ -47,6 +49,7 @@ public class PlatformerMovement: MonoBehaviour
         BaseSize = Camera.main.orthographicSize;
         body = gameObject.GetComponent<Rigidbody2D>();
         Anim = GetComponent<Animator>();
+        WinScreen.SetActive(false);
     }
 
     // Update is called once per frame
@@ -153,6 +156,12 @@ public class PlatformerMovement: MonoBehaviour
         }
         RocketCool -= Time.deltaTime;
         AmmoCounter.text = RocketsLeft.ToString();
+        if(WinScreen.activeSelf){
+            Time.timeScale = 0;
+            if(Input.GetKeyUp(KeyCode.Space)){
+                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            }
+        }
 
     }
     private void FixedUpdate()
@@ -209,6 +218,10 @@ public class PlatformerMovement: MonoBehaviour
             }
            
 
+        }
+        if(other.gameObject.CompareTag("Finish")){
+            WinScreen.SetActive(true);
+            
         }
        if(other.gameObject.TryGetComponent(out RespawnBox r)){
             RespawnPosition = r.RespawnPoint;
